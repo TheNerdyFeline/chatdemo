@@ -24,6 +24,7 @@ socket.on('chat', function(data){
 function sendMessage(event) {
 	console.log('SENDING: name: '+ nameInput.value + ', message: ' + messageInput.value);
 	socket.emit('chat', {name: nameInput.value, message: messageInput.value} );  
+	document.getElementById('messageinput').reset();
 }
 
 function displayNewMessage (username, message) {
